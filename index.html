@@ -9,17 +9,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --shizen-green: #1a3a2a;
-            --shizen-gold: #b8924e;
-            --shizen-cream: #fdfcf7;
+            --shizen-wine: #4A0E0E;   /* Concha de Vino Shizen */
+            --shizen-gold: #b8924e;   /* Dorado Shizen */
+            --shizen-cream: #fdfcf7;  /* Crema Shizen */
         }
         body { font-family: 'Inter', sans-serif; background-color: var(--shizen-cream); }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        .text-brand { color: var(--shizen-green); }
-        .bg-brand { background-color: var(--shizen-green); }
-        .bg-brand:hover { background-color: #12291d; }
-        .border-brand { border-color: var(--shizen-green); }
-        .accent-gold { color: var(--shizen-gold); }
+        
+        .text-wine { color: var(--shizen-wine); }
+        .bg-wine { background-color: var(--shizen-wine); }
+        .bg-wine:hover { background-color: #380a0a; }
+        .border-wine { border-color: var(--shizen-wine); }
+        
+        .text-gold { color: var(--shizen-gold); }
+        .bg-gold { background-color: var(--shizen-gold); }
         
         /* Animaciones */
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
@@ -33,15 +36,14 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
-                    <img src="Logo_Shizen_Horizontal.png" alt="Logo Shizen" class="h-10">
-                    <div class="h-8 w-px bg-gray-200 hidden sm:block"></div>
-                    <span class="text-xl font-bold text-brand italic tracking-tighter uppercase hidden sm:block">Daniel Espinoza</span>
+                    <!-- Eliminado texto Shizen de arriba, solo Daniel Espinoza -->
+                    <span class="text-2xl font-bold text-wine italic tracking-tighter uppercase">Daniel Espinoza</span>
                 </div>
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#servicios" class="hover:text-brand transition font-medium">Servicios</a>
-                    <a href="#asistente" class="hover:text-brand transition font-medium">Asistente AI ✨</a>
-                    <a href="#modalidades" class="hover:text-brand transition font-medium">Contacto</a>
-                    <a href="http://shizen.ymaaecuador.com" target="_blank" class="bg-brand text-white px-5 py-2 rounded-full font-semibold transition text-sm">Mi Escuela</a>
+                    <a href="#servicios" class="hover:text-wine transition font-medium">Servicios</a>
+                    <a href="#perfil" class="hover:text-wine transition font-medium">Perfil</a>
+                    <a href="#modalidades" class="hover:text-wine transition font-medium">Contacto</a>
+                    <a href="http://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm">Mi Escuela</a>
                 </div>
             </div>
         </div>
@@ -52,35 +54,35 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex items-center gap-16">
                 <div class="lg:w-1/2 space-y-8">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100">
                         <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-6">
-                        <span class="text-brand font-bold text-xs uppercase tracking-widest">Practitioner Registrar</span>
+                        <span class="text-wine font-bold text-xs uppercase tracking-widest">Practitioner Registrar</span>
                     </div>
                     
-                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight uppercase">
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight uppercase text-wine">
                         REHABILITACIÓN FÍSICA INTEGRATIVA Y MEDICINA TRADICIONAL CHINA
                     </h1>
                     
                     <p class="text-xl text-gray-600 leading-relaxed">
-                        Recuperación funcional, equilibrio energético y <span class="text-brand font-bold italic">Dietoterapia MTC</span>. Consultas presenciales en Guayaquil y asesorías virtuales personalizadas.
+                        Recuperación funcional, equilibrio energético y <span class="text-wine font-bold italic">Dietoterapia MTC</span>. Consultas presenciales en Guayaquil y asesorías virtuales personalizadas.
                     </p>
                     
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                        <a href="https://wa.me/593999431636" class="bg-brand text-white text-center px-6 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white text-center px-6 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2">
                             <i class="fas fa-hospital-user"></i> Cita Presencial
                         </a>
-                        <a href="https://wa.me/593999431636" class="border-2 border-brand text-brand text-center px-6 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/593999431636" target="_blank" class="border-2 border-wine text-wine text-center px-6 py-4 rounded-xl font-bold text-lg hover:bg-red-50 transition-all flex items-center justify-center gap-2">
                             <i class="fas fa-video"></i> Cita Online
                         </a>
                     </div>
                 </div>
 
                 <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
-                    <div class="aspect-[4/5] bg-emerald-50 rounded-[3rem] overflow-hidden shadow-2xl relative border border-emerald-100">
+                    <div class="aspect-[4/5] bg-red-50 rounded-[3rem] overflow-hidden shadow-2xl relative border border-red-100">
                         <img src="Perfil Daniel Espinoza.jpg" alt="Daniel Espinoza" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
-                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80">Director de Shizen YMAA</p>
-                            <h2 class="text-white text-2xl font-bold italic">Daniel Espinoza G.</h2>
+                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80 italic">Practitioner Registrar FEMTC</p>
+                            <h2 class="text-white text-3xl font-bold italic">Daniel Espinoza G.</h2>
                         </div>
                     </div>
                 </div>
@@ -88,153 +90,100 @@
         </div>
     </section>
 
-    <!-- Asistente de Bienestar ✨ (IA Gemini) -->
-    <section id="asistente" class="py-24" style="background-color: var(--shizen-cream);">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-[3rem] shadow-2xl overflow-hidden border border-emerald-50">
-                <div class="bg-brand p-8 text-white text-center">
-                    <h2 class="text-3xl font-bold italic mb-2">Asistente de Bienestar AI ✨</h2>
-                    <p class="text-emerald-100 font-light">Consulta sobre tus molestias o dudas de dietoterapia energética.</p>
-                </div>
-                
-                <div class="p-8 space-y-6">
-                    <textarea id="ai-input" rows="3" class="w-full p-5 rounded-3xl border border-gray-100 focus:ring-2 focus:ring-emerald-500 outline-none transition text-gray-700" placeholder="Ej: Me duele la espalda baja y tengo poca energía..."></textarea>
-                    
-                    <div class="flex flex-wrap gap-2">
-                        <button onclick="fillExample('Dieta MTC para mejorar la energía (Qi)')" class="text-xs bg-emerald-50 text-brand px-4 py-2 rounded-full font-bold hover:bg-emerald-100 transition">Energía Qi ✨</button>
-                        <button onclick="fillExample('Cómo tratar el dolor lumbar crónico')" class="text-xs bg-emerald-50 text-brand px-4 py-2 rounded-full font-bold hover:bg-emerald-100 transition">Dolor Lumbar ✨</button>
-                        <button onclick="fillExample('Alimentos para el calor interno')" class="text-xs bg-emerald-50 text-brand px-4 py-2 rounded-full font-bold hover:bg-emerald-100 transition">Calor Interno ✨</button>
-                    </div>
-
-                    <button id="ai-btn" onclick="askGemini()" class="w-full bg-brand text-white py-5 rounded-2xl font-bold text-xl shadow-lg hover:scale-[1.01] active:scale-95 transition-all">
-                        Consultar Asistente ✨
-                    </button>
-
-                    <div id="ai-result-box" class="hidden fade-in bg-emerald-50 p-8 rounded-[2rem] border border-emerald-100 relative">
-                        <p id="ai-result" class="text-gray-700 leading-relaxed italic"></p>
-                        <div class="mt-6 pt-6 border-t border-emerald-200 flex justify-between items-center text-xs text-gray-500">
-                            <span class="font-bold uppercase tracking-widest">Orientación Sugerida</span>
-                            <a href="https://wa.me/593999431636" class="text-brand font-bold">Hablar con Daniel →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Perfil / Visión -->
+    <section id="perfil" class="py-24 bg-white border-t border-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-8 italic text-wine uppercase">Visión Integradora</h2>
+            <p class="text-gray-600 text-lg leading-relaxed">
+                Mi compromiso es ofrecer un abordaje terapéutico donde el rigor de la rehabilitación física moderna se potencie con la sabiduría milenaria de la Medicina Tradicional China. Buscamos el equilibrio funcional y energético de cada paciente.
+            </p>
         </div>
     </section>
 
     <!-- Servicios -->
-    <section id="servicios" class="py-24 bg-white">
+    <section id="servicios" class="py-24" style="background-color: var(--shizen-cream);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-brand">Especialidades Integrativas</h2>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-wine uppercase">Especialidades Terapéuticas</h2>
             <div class="grid md:grid-cols-3 gap-8">
+                <!-- Rehab -->
                 <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition">
-                    <div class="w-14 h-14 bg-brand/5 rounded-2xl flex items-center justify-center mb-8">
-                        <i class="fas fa-bone text-brand text-2xl"></i>
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fas fa-bone text-wine text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Rehabilitación Física</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Corrección postural, kinesiología y recuperación funcional asistida.</p>
-                    <span class="text-[10px] font-bold text-brand uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Presencial</span>
+                    <h3 class="text-xl font-bold mb-4 text-wine">Rehabilitación Física</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Tratamiento funcional de lesiones, kinesiología y corrección postural asistida.</p>
+                    <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
                 </div>
 
+                <!-- MTC -->
                 <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition">
-                    <div class="w-14 h-14 bg-brand/5 rounded-2xl flex items-center justify-center mb-8">
-                        <i class="fas fa-yin-yang text-brand text-2xl"></i>
+                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-8">
+                        <i class="fas fa-yin-yang text-wine text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Acupuntura & MTC</h3>
+                    <h3 class="text-xl font-bold mb-4 text-wine">Acupuntura & MTC</h3>
                     <p class="text-gray-500 text-sm leading-relaxed mb-6">Equilibrio energético basado en las cinco funciones y meridianos vitales.</p>
-                    <span class="text-[10px] font-bold text-brand uppercase tracking-widest bg-emerald-50 px-3 py-1 rounded-full">Presencial</span>
+                    <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
                 </div>
 
-                <div class="bg-white p-10 rounded-[2.5rem] border border-amber-100 shadow-sm hover:shadow-xl transition border-t-4 border-t-amber-500">
+                <!-- Dietoterapia -->
+                <div class="bg-white p-10 rounded-[2.5rem] border border-amber-100 shadow-sm hover:shadow-xl transition border-t-4 border-t-gold">
                     <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-8">
                         <i class="fas fa-leaf text-amber-700 text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 accent-gold italic">Dietoterapia MTC</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Nutrición energética para fortalecer tu salud orgánica desde el interior.</p>
+                    <h3 class="text-xl font-bold mb-4 text-gold italic">Dietoterapia MTC</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Nutrición energética para fortalecer tu salud orgánica desde el interior a través de los alimentos.</p>
                     <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full">Presencial & Online</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-white py-16 border-t border-gray-100">
+    <!-- Modalidades / Contacto -->
+    <section id="modalidades" class="py-24 bg-wine text-white overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-5xl font-bold mb-8 italic">Atención Profesional</h2>
+            <p class="text-xl text-red-100 mb-12 max-w-2xl mx-auto font-light">
+                Coordina tu cita presencial en Guayaquil o inicia tu proceso de Dietoterapia Online desde cualquier lugar.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="https://wa.me/593999431636" target="_blank" class="bg-white text-wine px-10 py-5 rounded-2xl font-bold text-xl shadow-lg hover:bg-gray-100 transition-all flex items-center gap-3">
+                    Agendar por WhatsApp <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="http://shizen.ymaaecuador.com" target="_blank" class="border-2 border-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all">
+                    Visitar mi Escuela
+                </a>
+            </div>
+        </div>
+        <!-- Decoración -->
+        <i class="fas fa-yin-yang absolute -bottom-10 -right-10 text-[20rem] text-white/5 rotate-12"></i>
+    </section>
+
+    <!-- Footer Actualizado con Logos Grandes y Redes -->
+    <footer class="bg-white py-20 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex justify-center items-center gap-12 mb-10 opacity-50 grayscale hover:grayscale-0 transition">
-                <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-8">
-                <img src="Logo_Shizen_Horizontal.png" alt="Shizen" class="h-8">
-                <img src="Logo_YMAA_Horizontal.png" alt="YMAA" class="h-6">
+            <!-- Logos más grandes -->
+            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 mb-16 opacity-80">
+                <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-16 md:h-20 grayscale hover:grayscale-0 transition">
+                <img src="Logo_Shizen_Horizontal.png" alt="Shizen" class="h-12 md:h-16 grayscale hover:grayscale-0 transition">
+                <img src="Logo_YMAA_Horizontal.png" alt="YMAA" class="h-12 md:h-14 grayscale hover:grayscale-0 transition">
             </div>
-            <p class="text-2xl font-bold text-brand italic tracking-tighter mb-4">DANIEL ESPINOZA</p>
-            <p class="text-gray-500 text-sm mb-8">Guayaquil, Ecuador | Terapia Presencial y Online</p>
-            <div class="flex justify-center gap-6 text-2xl text-brand">
-                <a href="https://wa.me/593999431636"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:daniel.espinoza.g@gmail.com"><i class="far fa-envelope"></i></a>
+
+            <p class="text-3xl font-bold text-wine italic tracking-tighter mb-4">DANIEL ESPINOZA</p>
+            <p class="text-gray-500 text-sm mb-10">Rehabilitador Físico & Especialista en MTC | Guayaquil, Ecuador</p>
+            
+            <!-- Redes Sociales Añadidas -->
+            <div class="flex justify-center gap-8 text-3xl text-wine mb-12">
+                <a href="https://wa.me/593999431636" target="_blank" class="hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://instagram.com/mtc.danielespinoza" target="_blank" class="hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com/mtc.danielespinoza" target="_blank" class="hover:scale-110 transition"><i class="fab fa-facebook"></i></a>
+                <a href="mailto:daniel.espinoza.g@gmail.com" target="_blank" class="hover:scale-110 transition"><i class="far fa-envelope"></i></a>
             </div>
+
+            <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-bold border-t border-gray-50 pt-10">
+                © 2025 Daniel Espinoza Gutiérrez | Todos los enlaces externos se abren en pestañas nuevas.
+            </p>
         </div>
     </footer>
 
-    <!-- Scripts IA Gemini ✨ -->
-    <script>
-        const apiKey = ""; // La clave se provee en tiempo de ejecución
-
-        function fillExample(text) {
-            document.getElementById('ai-input').value = text;
-        }
-
-        async function askGemini() {
-            const input = document.getElementById('ai-input').value;
-            const btn = document.getElementById('ai-btn');
-            const resultBox = document.getElementById('ai-result-box');
-            const resultText = document.getElementById('ai-result');
-
-            if (!input.trim()) return;
-
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Consultando al Qi...';
-            resultBox.classList.add('hidden');
-
-            const systemPrompt = `Eres el asistente AI de Daniel Espinoza, experto en MTC y Rehabilitación Física. 
-            Responde de forma profesional, breve y cálida. 
-            Usa conceptos de Medicina Tradicional China (5 elementos, Qi) y Dietoterapia MTC. 
-            Menciona siempre que es una orientación inicial y recomienda agendar cita con Daniel (presencial en Guayaquil o virtual). 
-            Máximo 100 palabras.`;
-
-            const payload = {
-                contents: [{ parts: [{ text: input }] }],
-                systemInstruction: { parts: [{ text: systemPrompt }] }
-            };
-
-            const callApi = async (retries = 5) => {
-                try {
-                    const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`, {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify(payload)
-                    });
-                    const data = await resp.json();
-                    return data.candidates[0].content.parts[0].text;
-                } catch (err) {
-                    if (retries > 0) {
-                        await new Promise(r => setTimeout(r, 1000 * (6 - retries)));
-                        return callApi(retries - 1);
-                    }
-                    throw err;
-                }
-            };
-
-            try {
-                const text = await callApi();
-                resultText.innerText = text;
-                resultBox.classList.remove('hidden');
-            } catch (e) {
-                resultText.innerText = "Error de conexión. Por favor contacta a Daniel directamente por WhatsApp.";
-                resultBox.classList.remove('hidden');
-            } finally {
-                btn.disabled = false;
-                btn.innerHTML = 'Obtener Orientación ✨';
-            }
-        }
-    </script>
 </body>
 </html>
