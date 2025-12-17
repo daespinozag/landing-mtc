@@ -27,6 +27,19 @@
         /* Animaciones */
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Estilo para la marca de agua */
+        .watermark {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.04;
+            pointer-events: none;
+            z-index: 0;
+            width: 80%;
+            max-width: 600px;
+        }
     </style>
 </head>
 <body class="text-gray-900">
@@ -36,13 +49,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex items-center gap-3">
-                    <!-- Eliminado texto Shizen de arriba, solo Daniel Espinoza -->
                     <span class="text-2xl font-bold text-wine italic tracking-tighter uppercase">Daniel Espinoza</span>
                 </div>
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#servicios" class="hover:text-wine transition font-medium">Servicios</a>
-                    <a href="#perfil" class="hover:text-wine transition font-medium">Perfil</a>
-                    <a href="#modalidades" class="hover:text-wine transition font-medium">Contacto</a>
+                    <a href="#servicios" class="hover:text-wine transition font-medium text-sm">Servicios</a>
+                    <a href="#perfil" class="hover:text-wine transition font-medium text-sm">Perfil</a>
+                    <a href="#modalidades" class="hover:text-wine transition font-medium text-sm">Contacto</a>
                     <a href="http://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm">Mi Escuela</a>
                 </div>
             </div>
@@ -50,8 +62,15 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative py-16 lg:py-24 overflow-hidden bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="relative py-16 lg:py-32 overflow-hidden bg-white">
+        <!-- Marca de agua Yin Yang -->
+        <div class="watermark">
+            <svg viewBox="0 0 100 100" fill="currentColor">
+                <path d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 95c-11.8 0-21.5-9.2-21.5-20.5S38.2 54 50 54s21.5 9.2 21.5 20.5S61.8 95 50 95zm0-41c-11.8 0-21.5-9.2-21.5-20.5S38.2 13 50 13s21.5 9.2 21.5 20.5S61.8 54 50 54zm0-24.5c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 41c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0-57.5c20.4 0 37 16.6 37 37S70.4 87 50 87 13 70.4 13 50s16.6-37 37-37z"/>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="lg:flex items-center gap-16">
                 <div class="lg:w-1/2 space-y-8">
                     <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100">
@@ -59,20 +78,17 @@
                         <span class="text-wine font-bold text-xs uppercase tracking-widest">Practitioner Registrar</span>
                     </div>
                     
-                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight uppercase text-wine">
-                        REHABILITACIÓN FÍSICA INTEGRATIVA Y MEDICINA TRADICIONAL CHINA
+                    <h1 class="text-4xl lg:text-7xl font-bold leading-tight uppercase text-wine">
+                        REHABILITACIÓN INTEGRATIVA <span class="text-gold font-serif italic">&</span> MTC
                     </h1>
                     
-                    <p class="text-xl text-gray-600 leading-relaxed">
-                        Recuperación funcional, equilibrio energético y <span class="text-wine font-bold italic">Dietoterapia MTC</span>. Consultas presenciales en Guayaquil y asesorías virtuales personalizadas.
+                    <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
+                        Fusión de kinesiología clínica y sabiduría milenaria. <span class="text-wine font-bold italic">Dietoterapia</span>, Acupuntura y Rehabilitación Física.
                     </p>
                     
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-                        <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white text-center px-6 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-hospital-user"></i> Cita Presencial
-                        </a>
-                        <a href="https://wa.me/593999431636" target="_blank" class="border-2 border-wine text-wine text-center px-6 py-4 rounded-xl font-bold text-lg hover:bg-red-50 transition-all flex items-center justify-center gap-2">
-                            <i class="fas fa-video"></i> Cita Online
+                    <div class="pt-4">
+                        <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white text-center px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center justify-center gap-3 w-full sm:w-auto">
+                            <i class="fab fa-whatsapp"></i> Agendar Cita
                         </a>
                     </div>
                 </div>
@@ -93,9 +109,9 @@
     <!-- Perfil / Visión -->
     <section id="perfil" class="py-24 bg-white border-t border-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl mx-auto">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-8 italic text-wine uppercase">Visión Integradora</h2>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-8 italic text-wine uppercase">Visión de Salud</h2>
             <p class="text-gray-600 text-lg leading-relaxed">
-                Mi compromiso es ofrecer un abordaje terapéutico donde el rigor de la rehabilitación física moderna se potencie con la sabiduría milenaria de la Medicina Tradicional China. Buscamos el equilibrio funcional y energético de cada paciente.
+                Mi compromiso es ofrecer un abordaje terapéutico donde el rigor de la rehabilitación física moderna se potencie con la sabiduría de la Medicina Tradicional China. Buscamos el equilibrio funcional y energético de cada paciente.
             </p>
         </div>
     </section>
@@ -103,7 +119,7 @@
     <!-- Servicios -->
     <section id="servicios" class="py-24" style="background-color: var(--shizen-cream);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-wine uppercase">Especialidades Terapéuticas</h2>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-wine uppercase tracking-wide">Especialidades</h2>
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Rehab -->
                 <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition">
@@ -111,7 +127,7 @@
                         <i class="fas fa-bone text-wine text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-wine">Rehabilitación Física</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Tratamiento funcional de lesiones, kinesiología y corrección postural asistida.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Tratamiento funcional de lesiones, kinesiología avanzada y corrección postural asistida.</p>
                     <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
                 </div>
 
@@ -121,7 +137,7 @@
                         <i class="fas fa-yin-yang text-wine text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-wine">Acupuntura & MTC</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Equilibrio energético basado en las cinco funciones y meridianos vitales.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Equilibrio energético basado en las cinco funciones y meridianos vitales acreditado por la FEMTC.</p>
                     <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
                 </div>
 
@@ -131,7 +147,7 @@
                         <i class="fas fa-leaf text-amber-700 text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-gold italic">Dietoterapia MTC</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Nutrición energética para fortalecer tu salud orgánica desde el interior a través de los alimentos.</p>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Nutrición energética para fortalecer tu salud orgánica desde el interior a través de la dietética tradicional.</p>
                     <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full">Presencial & Online</span>
                 </div>
             </div>
@@ -140,28 +156,24 @@
 
     <!-- Modalidades / Contacto -->
     <section id="modalidades" class="py-24 bg-wine text-white overflow-hidden relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-3xl lg:text-5xl font-bold mb-8 italic">Atención Profesional</h2>
             <p class="text-xl text-red-100 mb-12 max-w-2xl mx-auto font-light">
-                Coordina tu cita presencial en Guayaquil o inicia tu proceso de Dietoterapia Online desde cualquier lugar.
+                Coordina tu cita presencial en Guayaquil o inicia tu proceso de Dietoterapia Online desde cualquier lugar del mundo.
             </p>
             <div class="flex flex-wrap justify-center gap-6">
                 <a href="https://wa.me/593999431636" target="_blank" class="bg-white text-wine px-10 py-5 rounded-2xl font-bold text-xl shadow-lg hover:bg-gray-100 transition-all flex items-center gap-3">
-                    Agendar por WhatsApp <i class="fab fa-whatsapp"></i>
-                </a>
-                <a href="http://shizen.ymaaecuador.com" target="_blank" class="border-2 border-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-white/10 transition-all">
-                    Visitar mi Escuela
+                    Contactar por WhatsApp <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
         </div>
-        <!-- Decoración -->
-        <i class="fas fa-yin-yang absolute -bottom-10 -right-10 text-[20rem] text-white/5 rotate-12"></i>
+        <!-- Decoración Yin Yang más visible en el fondo del CTA -->
+        <i class="fas fa-yin-yang absolute -bottom-10 -right-10 text-[25rem] text-white/5 rotate-12"></i>
     </section>
 
-    <!-- Footer Actualizado con Logos Grandes y Redes -->
+    <!-- Footer -->
     <footer class="bg-white py-20 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <!-- Logos más grandes -->
             <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 mb-16 opacity-80">
                 <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-16 md:h-20 grayscale hover:grayscale-0 transition">
                 <img src="Logo_Shizen_Horizontal.png" alt="Shizen" class="h-12 md:h-16 grayscale hover:grayscale-0 transition">
@@ -169,9 +181,8 @@
             </div>
 
             <p class="text-3xl font-bold text-wine italic tracking-tighter mb-4">DANIEL ESPINOZA</p>
-            <p class="text-gray-500 text-sm mb-10">Rehabilitador Físico & Especialista en MTC | Guayaquil, Ecuador</p>
+            <p class="text-gray-500 text-sm mb-10 uppercase tracking-widest">Rehabilitador Físico & MTC | Guayaquil, Ecuador</p>
             
-            <!-- Redes Sociales Añadidas -->
             <div class="flex justify-center gap-8 text-3xl text-wine mb-12">
                 <a href="https://wa.me/593999431636" target="_blank" class="hover:scale-110 transition"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://instagram.com/mtc.danielespinoza" target="_blank" class="hover:scale-110 transition"><i class="fab fa-instagram"></i></a>
@@ -180,7 +191,7 @@
             </div>
 
             <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-bold border-t border-gray-50 pt-10">
-                © 2025 Daniel Espinoza Gutiérrez | Todos los enlaces externos se abren en pestañas nuevas.
+                © 2025 Daniel Espinoza Gutiérrez | Guayaquil - Ecuador
             </p>
         </div>
     </footer>
