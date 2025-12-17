@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Espinoza | Rehabilitación Integrativa y MTC</title>
+    <title>Daniel Espinoza | Rehabilitación Física y MTC</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
@@ -40,8 +40,6 @@
             width: 80%;
             max-width: 600px;
         }
-
-        .blog-card:hover .blog-image { transform: scale(1.05); }
     </style>
 </head>
 <body class="text-gray-900">
@@ -56,8 +54,7 @@
                 <div class="hidden md:flex space-x-6 items-center">
                     <a href="#servicios" class="hover:text-wine transition font-medium text-sm">Servicios</a>
                     <a href="#articulos" class="hover:text-wine transition font-medium text-sm">Blog</a>
-                    <a href="#testimonios" class="hover:text-wine transition font-medium text-sm">Testimonios</a>
-                    <a href="#modalidades" class="hover:text-wine transition font-medium text-sm">Contacto</a>
+                    <a href="#contacto" class="hover:text-wine transition font-medium text-sm">Contacto</a>
                     <a href="http://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm">Mi Escuela</a>
                 </div>
             </div>
@@ -81,8 +78,8 @@
                         <span class="text-wine font-bold text-xs uppercase tracking-widest">Practitioner Registrar</span>
                     </div>
                     
-                    <h1 class="text-4xl lg:text-7xl font-bold leading-tight uppercase text-wine">
-                        REHABILITACIÓN INTEGRATIVA <span class="text-gold font-serif italic">&</span> MTC
+                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight uppercase text-wine">
+                        REHABILITACIÓN FÍSICA INTEGRATIVA Y MEDICINA TRADICIONAL CHINA
                     </h1>
                     
                     <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
@@ -100,8 +97,8 @@
                     <div class="aspect-[4/5] bg-red-50 rounded-[3rem] overflow-hidden shadow-2xl relative border border-red-100">
                         <img src="Perfil Daniel Espinoza.jpg" alt="Daniel Espinoza" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
-                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80 italic text-shadow">Practitioner Registrar FEMTC</p>
-                            <h2 class="text-white text-3xl font-bold italic text-shadow">Daniel Espinoza G.</h2>
+                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80 italic">Practitioner Registrar FEMTC</p>
+                            <h2 class="text-white text-3xl font-bold italic">Daniel Espinoza G.</h2>
                         </div>
                     </div>
                 </div>
@@ -109,150 +106,72 @@
         </div>
     </section>
 
-    <!-- Artículos y Blog (Nueva Sección) -->
-    <section id="articulos" class="py-24" style="background-color: var(--shizen-cream);">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-                <div class="max-w-2xl">
-                    <h2 class="text-3xl lg:text-4xl font-bold italic text-wine uppercase tracking-wide">Investigación y Divulgación</h2>
-                    <p class="text-gray-600 mt-4 text-lg">Comparto regularmente artículos sobre medicina tradicional, biomecánica y bienestar en el blog de mi escuela.</p>
-                </div>
-                <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="mt-6 md:mt-0 text-wine font-bold border-b-2 border-wine pb-1 hover:text-gold hover:border-gold transition-all">Ver todos los artículos →</a>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Articulo 1 -->
-                <div class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
-                    <div class="h-48 overflow-hidden bg-wine/10 flex items-center justify-center">
-                        <i class="fas fa-yin-yang text-wine/20 text-6xl"></i>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Medicina Tradicional China</span>
-                        <h4 class="text-xl font-bold mt-2 mb-4 text-wine">La Ley de las 5 Funciones en la clínica moderna</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Cómo aplicamos los principios energéticos milenarios para tratar patologías del siglo XXI.</p>
-                        <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="text-wine font-bold text-sm flex items-center gap-2">Leer más <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                    </div>
-                </div>
-
-                <!-- Articulo 2 -->
-                <div class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
-                    <div class="h-48 overflow-hidden bg-wine/10 flex items-center justify-center">
-                        <i class="fas fa-heartbeat text-wine/20 text-6xl"></i>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Rehabilitación</span>
-                        <h4 class="text-xl font-bold mt-2 mb-4 text-wine">Postura y Qi: La biomecánica del equilibrio</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Análisis kinesiología de cómo la alineación física influye en el flujo energético vital.</p>
-                        <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="text-wine font-bold text-sm flex items-center gap-2">Leer más <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                    </div>
-                </div>
-
-                <!-- Articulo 3 -->
-                <div class="blog-card bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
-                    <div class="h-48 overflow-hidden bg-wine/10 flex items-center justify-center">
-                        <i class="fas fa-leaf text-wine/20 text-6xl"></i>
-                    </div>
-                    <div class="p-8 flex-grow">
-                        <span class="text-[10px] font-bold text-gold uppercase tracking-[0.2em]">Dietoterapia</span>
-                        <h4 class="text-xl font-bold mt-2 mb-4 text-wine">Energética de los alimentos de estación</h4>
-                        <p class="text-gray-500 text-sm leading-relaxed mb-6">Guía práctica para armonizar tu nutrición según los ciclos de la naturaleza.</p>
-                        <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="text-wine font-bold text-sm flex items-center gap-2">Leer más <i class="fas fa-external-link-alt text-[10px]"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Especialidades -->
+    <!-- Áreas de Especialidad (Servicios más grandes) -->
     <section id="servicios" class="py-24 bg-white border-t border-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-wine uppercase tracking-wide">Áreas de Especialidad</h2>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-20 text-center italic text-wine uppercase tracking-wide">Servicios</h2>
+            <div class="grid md:grid-cols-3 gap-10">
                 <!-- Rehab -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition">
-                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-8">
-                        <i class="fas fa-bone text-wine text-2xl"></i>
+                <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-red-50 rounded-3xl flex items-center justify-center mb-10">
+                        <i class="fas fa-bone text-wine text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-wine">Rehabilitación Física</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Evaluación kinesiología, tratamiento de lesiones músculo-esqueléticas y corrección postural personalizada.</p>
-                    <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
+                    <h3 class="text-2xl font-bold mb-6 text-wine">Rehabilitación Física</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8 flex-grow">Evaluación kinesiología profunda, tratamiento de lesiones músculo-esqueléticas y corrección postural asistida mediante protocolos clínicos.</p>
+                    <span class="text-xs font-bold text-wine uppercase tracking-widest bg-red-50 px-5 py-2 rounded-full">Presencial</span>
                 </div>
 
                 <!-- MTC -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-gray-100 shadow-sm hover:shadow-xl transition">
-                    <div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-8">
-                        <i class="fas fa-yin-yang text-wine text-2xl"></i>
+                <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center">
+                    <div class="w-20 h-20 bg-red-50 rounded-3xl flex items-center justify-center mb-10">
+                        <i class="fas fa-yin-yang text-wine text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-wine">Acupuntura & MTC</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Equilibrio energético basado en las cinco funciones y meridianos vitales acreditado por la FEMTC.</p>
-                    <span class="text-[10px] font-bold text-wine uppercase tracking-widest bg-red-50 px-3 py-1 rounded-full">Presencial</span>
+                    <h3 class="text-2xl font-bold mb-6 text-wine">Acupuntura & MTC</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8 flex-grow">Equilibrio del sistema energético corporal basado en las cinco funciones vitales, acreditado internacionalmente por la FEMTC.</p>
+                    <span class="text-xs font-bold text-wine uppercase tracking-widest bg-red-50 px-5 py-2 rounded-full">Presencial</span>
                 </div>
 
                 <!-- Dietoterapia -->
-                <div class="bg-white p-10 rounded-[2.5rem] border border-amber-100 shadow-sm hover:shadow-xl transition border-t-4 border-t-gold">
-                    <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-8">
-                        <i class="fas fa-mortar-pestle text-amber-700 text-2xl"></i>
+                <div class="bg-white p-12 rounded-[3rem] border border-amber-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center text-center border-t-8 border-t-gold">
+                    <div class="w-20 h-20 bg-amber-50 rounded-3xl flex items-center justify-center mb-10">
+                        <i class="fas fa-mortar-pestle text-amber-700 text-4xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4 text-gold italic">Dietoterapia MTC</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Planificación nutricional basada en la naturaleza energética de los alimentos para sanar desde el interior.</p>
-                    <span class="text-[10px] font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-3 py-1 rounded-full">Presencial & Online</span>
+                    <h3 class="text-2xl font-bold mb-6 text-gold italic">Dietoterapia MTC</h3>
+                    <p class="text-gray-500 text-lg leading-relaxed mb-8 flex-grow">Sanar desde el interior. Nutrición energética personalizada basada en la naturaleza de los alimentos para potenciar tu vitalidad.</p>
+                    <span class="text-xs font-bold text-amber-600 uppercase tracking-widest bg-amber-50 px-5 py-2 rounded-full">Presencial & Online</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonios (Nueva Sección) -->
-    <section id="testimonios" class="py-24" style="background-color: white;">
+    <!-- Artículos y Blog (Sección simplificada después de Servicios) -->
+    <section id="articulos" class="py-24" style="background-color: var(--shizen-cream);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-16 text-center italic text-wine uppercase tracking-wide">Experiencias de Pacientes</h2>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonio 1 -->
-                <div class="bg-red-50/30 p-10 rounded-3xl border border-red-100 italic">
-                    <p class="text-gray-600 mb-6">"Llegué con un dolor lumbar crónico que no cedía. La combinación de rehabilitación física y acupuntura de Daniel fue la clave para recuperar mi movilidad después de meses."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-wine text-white rounded-full flex items-center justify-center font-bold">R</div>
-                        <div>
-                            <p class="text-sm font-bold text-wine">Ricardo M.</p>
-                            <p class="text-[10px] uppercase text-gold font-bold">Paciente Presencial</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonio 2 -->
-                <div class="bg-red-50/30 p-10 rounded-3xl border border-red-100 italic">
-                    <p class="text-gray-600 mb-6">"Su guía en dietoterapia cambió mi digestión y mis niveles de energía. La consulta online fue súper completa y fácil de seguir."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-wine text-white rounded-full flex items-center justify-center font-bold">M</div>
-                        <div>
-                            <p class="text-sm font-bold text-wine">María José P.</p>
-                            <p class="text-[10px] uppercase text-gold font-bold">Consulta Online</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonio 3 -->
-                <div class="bg-red-50/30 p-10 rounded-3xl border border-red-100 italic">
-                    <p class="text-gray-600 mb-6">"Un profesional integral. No solo trata el síntoma, te explica el porqué y te enseña a cuidar tu postura y energía diariamente."</p>
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 bg-wine text-white rounded-full flex items-center justify-center font-bold">J</div>
-                        <div>
-                            <p class="text-sm font-bold text-wine">Jorge L.</p>
-                            <p class="text-[10px] uppercase text-gold font-bold">Paciente Presencial</p>
-                        </div>
-                    </div>
+            <div class="bg-white rounded-[4rem] p-12 lg:p-20 shadow-2xl text-center border border-emerald-50">
+                <i class="fas fa-pen-nib text-gold text-5xl mb-8"></i>
+                <h2 class="text-3xl lg:text-5xl font-bold italic text-wine uppercase tracking-wide mb-8">Investigación y Divulgación</h2>
+                <p class="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed mb-12">
+                    Te invito a profundizar en temas de medicina tradicional, kinesiología y artes internas. Explora mis investigaciones y artículos detallados en el blog oficial de mi escuela.
+                </p>
+                <div class="flex justify-center">
+                    <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="bg-wine text-white px-12 py-5 rounded-2xl font-bold text-xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center gap-4">
+                        Visitar Blog Shizen <i class="fas fa-external-link-alt text-sm"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Modalidades / Contacto -->
-    <section id="modalidades" class="py-24 bg-wine text-white overflow-hidden relative">
+    <section id="contacto" class="py-24 bg-wine text-white overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <h2 class="text-3xl lg:text-5xl font-bold mb-8 italic">Atención Profesional</h2>
             <p class="text-xl text-red-100 mb-12 max-w-2xl mx-auto font-light leading-relaxed">
                 Coordina tu cita presencial en Guayaquil o inicia tu proceso de Dietoterapia Online desde cualquier lugar del mundo.
             </p>
-            <div class="flex flex-wrap justify-center gap-6">
-                <a href="https://wa.me/593999431636" target="_blank" class="bg-white text-wine px-10 py-5 rounded-2xl font-bold text-xl shadow-lg hover:bg-gray-100 transition-all flex items-center gap-3 hover:-translate-y-1">
-                    Contactar por WhatsApp <i class="fab fa-whatsapp"></i>
+            <div class="flex justify-center">
+                <a href="https://wa.me/593999431636" target="_blank" class="bg-white text-wine px-12 py-5 rounded-2xl font-bold text-xl shadow-lg hover:bg-gray-100 transition-all flex items-center gap-4">
+                    Agendar por WhatsApp <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
         </div>
@@ -263,16 +182,19 @@
     <!-- Footer -->
     <footer class="bg-white py-20 border-t border-gray-100">
         <div class="max-w-7xl mx-auto px-4 text-center">
-            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-20 mb-16 opacity-80">
-                <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-16 md:h-20 grayscale hover:grayscale-0 transition">
-                <img src="Logo_Shizen_Horizontal.png" alt="Shizen" class="h-12 md:h-16 grayscale hover:grayscale-0 transition">
-                <img src="Logo_YMAA_Horizontal.png" alt="YMAA" class="h-12 md:h-14 grayscale hover:grayscale-0 transition">
+            <!-- Logos Reordenados y Grandes -->
+            <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-12">Instituciones Afiliadas</p>
+            <div class="flex flex-wrap justify-center items-center gap-16 lg:gap-24 mb-20 opacity-90">
+                <img src="Logo_Shizen_Horizontal.png" alt="Shizen YMAA" class="h-16 md:h-24 grayscale hover:grayscale-0 transition duration-500">
+                <img src="Logo_YMAA_Horizontal.png" alt="YMAA International" class="h-14 md:h-20 grayscale hover:grayscale-0 transition duration-500">
+                <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-20 md:h-28 grayscale hover:grayscale-0 transition duration-500">
             </div>
 
             <p class="text-3xl font-bold text-wine italic tracking-tighter mb-4 uppercase">DANIEL ESPINOZA</p>
             <p class="text-gray-500 text-sm mb-10 uppercase tracking-widest font-semibold">Rehabilitador Físico & MTC | Guayaquil, Ecuador</p>
             
-            <div class="flex justify-center gap-8 text-3xl text-wine mb-12">
+            <!-- Redes Sociales -->
+            <div class="flex justify-center gap-10 text-4xl text-wine mb-16">
                 <a href="https://wa.me/593999431636" target="_blank" class="hover:scale-110 transition hover:text-gold"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://instagram.com/mtc.danielespinoza" target="_blank" class="hover:scale-110 transition hover:text-gold"><i class="fab fa-instagram"></i></a>
                 <a href="https://facebook.com/mtc.danielespinoza" target="_blank" class="hover:scale-110 transition hover:text-gold"><i class="fab fa-facebook"></i></a>
