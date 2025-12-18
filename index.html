@@ -30,6 +30,14 @@
         .text-gold { color: var(--shizen-gold); }
         .bg-gold { background-color: var(--shizen-gold); }
         
+        /* Estilo específico para el fondo del Hero */
+        .hero-background {
+            background-image: linear-gradient(rgba(253, 252, 247, 0.6), rgba(253, 252, 247, 0.6)), url('ed.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         /* Animaciones */
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
@@ -94,8 +102,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative py-16 lg:py-32 overflow-hidden bg-white">
+    <!-- Hero Section con la clase hero-background -->
+    <section class="relative py-16 lg:py-32 overflow-hidden hero-background">
         <div class="watermark text-wine">
             <svg viewBox="0 0 100 100" fill="currentColor">
                 <path d="M50,0A50,50,0,1,0,100,50,50,50,0,0,0,50,0ZM50,92A42,42,0,0,1,50,8,42,42,0,0,1,50,92ZM50,16a8,8,0,1,0,8,8A8,8,0,0,0,50,16Zm0,60a8,8,0,1,0,8,8A8,8,0,0,0,50,76ZM50,50a25,25,0,0,1,0-50A25,25,0,0,1,50,50,25,25,0,0,0,50,100,25,25,0,0,0,50,50Z"/>
