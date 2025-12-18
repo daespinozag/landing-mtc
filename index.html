@@ -3,15 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta para forzar que todo cargue por HTTPS y evitar errores de seguridad -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <title>Daniel Espinoza | Rehabilitación Física y MTC</title>
+    
+    <!-- Librerías con HTTPS explícito -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         :root {
-            --shizen-wine: #4A0E0E;   /* Concha de Vino Shizen */
-            --shizen-gold: #b8924e;   /* Dorado Shizen */
-            --shizen-cream: #fdfcf7;  /* Crema Shizen */
+            --shizen-wine: #4A0E0E;
+            --shizen-gold: #b8924e;
+            --shizen-cream: #fdfcf7;
         }
         body { font-family: 'Inter', sans-serif; background-color: var(--shizen-cream); scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -28,7 +34,7 @@
         .fade-in { animation: fadeIn 0.5s ease-out forwards; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
 
-        /* Estilo para la marca de agua */
+        /* Marca de agua Yin Yang Corregida */
         .watermark {
             position: absolute;
             top: 50%;
@@ -38,22 +44,37 @@
             pointer-events: none;
             z-index: 0;
             width: 80%;
-            max-width: 600px;
+            max-width: 500px;
         }
 
-        /* Estilos personalizados para Mailchimp para que no rompa el diseño */
-        #mc_embed_signup form { padding: 0 !important; }
-        .mc-field-group input { 
-            width: 100%; 
-            padding: 1rem; 
-            border-radius: 0.75rem; 
-            border: 1px solid #e2e8f0;
-            outline: none;
+        /* Estilo Mailchimp Adaptado */
+        #mc_embed_signup {
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 450px !important;
+            margin: 0 auto;
+            border: 1px solid #f1f5f9;
         }
-        .mc-field-group input:focus { border-color: var(--shizen-gold); }
+        #mc_embed_signup .mc-field-group { margin-bottom: 1rem; text-align: left; }
+        #mc_embed_signup label { font-weight: 700; color: var(--shizen-wine); font-size: 0.8rem; margin-bottom: 0.4rem; display: block; text-transform: uppercase; }
+        #mc_embed_signup input { width: 100%; border: 1px solid #e2e8f0; padding: 0.75rem; border-radius: 0.75rem; outline: none; }
+        #mc_embed_signup .button { 
+            background: var(--shizen-wine) !important; 
+            border-radius: 0.75rem !important; 
+            font-weight: 700 !important; 
+            text-transform: uppercase !important;
+            padding: 1rem !important;
+            height: auto !important;
+            width: 100% !important;
+            cursor: pointer;
+            border: none !important;
+            color: white !important;
+        }
     </style>
 </head>
-<body class="text-gray-900">
+<body class="text-gray-900 overflow-x-hidden">
 
     <!-- Navegación -->
     <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
@@ -63,11 +84,11 @@
                     <span class="text-2xl font-bold text-wine italic tracking-tighter uppercase">Daniel Espinoza</span>
                 </div>
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#trayectoria" class="hover:text-wine transition font-medium text-sm">Trayectoria</a>
-                    <a href="#servicios" class="hover:text-wine transition font-medium text-sm">Servicios</a>
-                    <a href="#articulos" class="hover:text-wine transition font-medium text-sm">Blog</a>
-                    <a href="#newsletter" class="hover:text-wine transition font-medium text-sm">Newsletter</a>
-                    <a href="http://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm shadow-md">Mi Escuela</a>
+                    <a href="#trayectoria" class="hover:text-wine transition font-medium text-sm text-wine">Trayectoria</a>
+                    <a href="#servicios" class="hover:text-wine transition font-medium text-sm text-wine">Servicios</a>
+                    <a href="#articulos" class="hover:text-wine transition font-medium text-sm text-wine">Blog</a>
+                    <a href="#newsletter" class="hover:text-wine transition font-medium text-sm text-wine">Newsletter</a>
+                    <a href="https://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm shadow-md">Mi Escuela</a>
                 </div>
             </div>
         </div>
@@ -75,31 +96,30 @@
 
     <!-- Hero Section -->
     <section class="relative py-16 lg:py-32 overflow-hidden bg-white">
-        <!-- Marca de agua Yin Yang -->
-        <div class="watermark">
+        <div class="watermark text-wine">
             <svg viewBox="0 0 100 100" fill="currentColor">
-                <path d="M50 0C22.4 0 0 22.4 0 50s22.4 50 50 50 50-22.4 50-50S77.6 0 50 0zm0 95c-11.8 0-21.5-9.2-21.5-20.5S38.2 54 50 54s21.5 9.2 21.5 20.5S61.8 95 50 95zm0-41c-11.8 0-21.5-9.2-21.5-20.5S38.2 13 50 13s21.5 9.2 21.5 20.5S61.8 54 50 54zm0-24.5c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 41c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0-57.5c20.4 0 37 16.6 37 37S70.4 87 50 87 13 70.4 13 50s16.6-37 37-37z"/>
+                <path d="M50,0A50,50,0,1,0,100,50,50,50,0,0,0,50,0ZM50,92A42,42,0,0,1,50,8,42,42,0,0,1,50,92ZM50,16a8,8,0,1,0,8,8A8,8,0,0,0,50,16Zm0,60a8,8,0,1,0,8,8A8,8,0,0,0,50,76ZM50,50a25,25,0,0,1,0-50A25,25,0,0,1,50,50,25,25,0,0,0,50,100,25,25,0,0,0,50,50Z"/>
             </svg>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center lg:text-left">
             <div class="lg:flex items-center gap-16">
                 <div class="lg:w-1/2 space-y-8">
-                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100">
-                        <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-6">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-red-50 border border-red-100 mx-auto lg:mx-0">
+                        <img src="Logo%20Fundacion%20MTC.png" alt="FEMTC" class="h-6">
                         <span class="text-wine font-bold text-xs uppercase tracking-widest">Practitioner Registrar</span>
                     </div>
                     
-                    <h1 class="text-4xl lg:text-6xl font-bold leading-tight uppercase text-wine">
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight uppercase text-wine">
                         REHABILITACIÓN FÍSICA INTEGRATIVA Y MEDICINA TRADICIONAL CHINA
                     </h1>
                     
-                    <p class="text-xl text-gray-600 leading-relaxed max-w-lg">
+                    <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-lg mx-auto lg:mx-0">
                         Terapeuta y Educador con más de <strong>12 años de experiencia</strong>. Uniendo la ciencia del movimiento con la sabiduría energética para tu salud.
                     </p>
                     
-                    <div class="pt-4">
-                        <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white text-center px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center justify-center gap-3 w-full sm:w-auto">
+                    <div class="pt-4 flex justify-center lg:justify-start">
+                        <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white text-center px-8 py-4 rounded-2xl font-bold text-lg shadow-2xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center justify-center gap-3 w-full sm:w-auto">
                             <i class="fab fa-whatsapp"></i> Agendar Cita
                         </a>
                     </div>
@@ -107,9 +127,9 @@
 
                 <div class="lg:w-1/2 mt-12 lg:mt-0 relative">
                     <div class="aspect-[4/5] bg-red-50 rounded-[3rem] overflow-hidden shadow-2xl relative border border-red-100">
-                        <img src="Perfil Daniel Espinoza.jpg" alt="Daniel Espinoza" class="w-full h-full object-cover">
+                        <img src="Perfil%20Daniel%20Espinoza.jpg" alt="Daniel Espinoza" class="w-full h-full object-cover">
                         <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-10">
-                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80 italic leading-none">Practitioner Registrar FEMTC</p>
+                            <p class="text-white text-[10px] font-bold uppercase tracking-[0.2em] mb-1 opacity-80 italic">Practitioner Registrar FEMTC</p>
                             <h2 class="text-white text-3xl font-bold italic">Daniel Espinoza G.</h2>
                         </div>
                     </div>
@@ -118,7 +138,7 @@
         </div>
     </section>
 
-    <!-- Sección: Trayectoria y Enfoque -->
+    <!-- Trayectoria -->
     <section id="trayectoria" class="py-24 bg-white border-t border-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="lg:flex gap-16 items-center">
@@ -126,20 +146,20 @@
                     <div class="p-10 bg-wine text-white rounded-[3rem] shadow-xl relative overflow-hidden">
                         <i class="fas fa-quote-left absolute top-6 left-6 text-6xl text-white/10"></i>
                         <h2 class="text-3xl font-bold italic mb-6 relative z-10 uppercase tracking-wide">Más de 12 años</h2>
-                        <p class="text-red-100 font-light leading-relaxed relative z-10">
-                            Dedicado tanto al acompañamiento terapéutico como a la formación de nuevos profesionales en Medicina China y Terapia Física Integrativa.
+                        <p class="text-red-100 font-light leading-relaxed relative z-10 text-lg">
+                            Dedicado tanto al acompañamiento terapéutico como a la formación de nuevos profesionales.
                         </p>
                     </div>
                 </div>
-                <div class="lg:w-2/3 space-y-8 text-lg text-gray-600 leading-relaxed">
+                <div class="lg:w-2/3 space-y-8 text-lg text-gray-600 leading-relaxed text-center lg:text-left">
                     <h3 class="text-3xl font-bold text-wine italic uppercase">Enfoque y Experiencia</h3>
                     <p>
-                        En mi práctica integro <strong>terapia manual</strong>, <strong>ejercicio terapéutico</strong>, abordajes de la Medicina Tradicional China y educación en salud. Mi objetivo es optimizar la funcionalidad, aliviar el dolor y promover un bienestar profundo y sostenible en cada paciente.
+                        En mi práctica integro <strong>terapia manual</strong>, <strong>ejercicio terapéutico</strong>, abordajes de la Medicina Tradicional China y educación en salud. Mi objetivo es optimizar la funcionalidad, aliviar el dolor y promover un bienestar profundo y sostenible.
                     </p>
                     <p>
                         Mi enfoque es <strong>integrativo, personalizado y consciente</strong>, orientado no solo a tratar síntomas, sino a acompañar procesos de recuperación y equilibrio a largo plazo.
                     </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
+                    <div class="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
                         <span class="bg-red-50 text-wine px-4 py-2 rounded-full text-sm font-bold border border-red-100 italic">#SaludConsciente</span>
                         <span class="bg-red-50 text-wine px-4 py-2 rounded-full text-sm font-bold border border-red-100 italic">#MedicinaChina</span>
                         <span class="bg-red-50 text-wine px-4 py-2 rounded-full text-sm font-bold border border-red-100 italic">#RehabilitacionFisica</span>
@@ -149,12 +169,11 @@
         </div>
     </section>
 
-    <!-- Servicios Integrativos (Más grandes) -->
+    <!-- Servicios -->
     <section id="servicios" class="py-24" style="background-color: var(--shizen-cream);">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-4xl lg:text-5xl font-bold mb-20 italic text-wine uppercase tracking-wide">Servicios</h2>
             <div class="grid md:grid-cols-3 gap-10">
-                <!-- Rehab -->
                 <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center group">
                     <div class="w-24 h-24 bg-red-50 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-wine transition-colors text-wine group-hover:text-white">
                         <i class="fas fa-hand-holding-medical text-4xl"></i>
@@ -164,7 +183,6 @@
                     <span class="text-xs font-bold text-wine uppercase tracking-widest bg-red-50 px-5 py-2 rounded-full">Presencial</span>
                 </div>
 
-                <!-- MTC -->
                 <div class="bg-white p-12 rounded-[3rem] border border-gray-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center group">
                     <div class="w-24 h-24 bg-red-50 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-wine transition-colors text-wine group-hover:text-white">
                         <i class="fas fa-yin-yang text-4xl"></i>
@@ -174,10 +192,9 @@
                     <span class="text-xs font-bold text-wine uppercase tracking-widest bg-red-50 px-5 py-2 rounded-full">Presencial</span>
                 </div>
 
-                <!-- Dietoterapia -->
-                <div class="bg-white p-12 rounded-[3rem] border border-amber-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center border-t-8 border-t-gold group">
+                <div class="bg-white p-12 rounded-[3rem] border border-amber-100 shadow-sm hover:shadow-xl transition-all flex flex-col items-center border-t-8 border-t-gold group text-center">
                     <div class="w-24 h-24 bg-amber-50 rounded-3xl flex items-center justify-center mb-10 group-hover:bg-amber-600 transition-colors text-amber-700 group-hover:text-white">
-                        <i class="fas fa-mortar-pestle text-4xl"></i>
+                        <i class="fas fa-leaf text-4xl"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-6 text-gold italic">Dietoterapia MTC</h3>
                     <p class="text-gray-500 text-lg leading-relaxed mb-8 flex-grow">Nutrición energética basada en la naturaleza de los alimentos para fortalecer tu vitalidad.</p>
@@ -187,17 +204,17 @@
         </div>
     </section>
 
-    <!-- Artículos y Blog -->
-    <section id="articulos" class="py-24 bg-white border-y border-gray-100">
+    <!-- Blog -->
+    <section id="articulos" class="py-24 bg-white border-y border-gray-100 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-[4rem] p-12 lg:p-20 shadow-lg text-center border border-gray-100">
+            <div class="bg-white rounded-[4rem] p-12 lg:p-20 shadow-lg border border-gray-100">
                 <i class="fas fa-book-open text-gold text-5xl mb-8"></i>
                 <h2 class="text-3xl lg:text-5xl font-bold italic text-wine uppercase tracking-wide mb-8">Consejos para tu Salud</h2>
                 <p class="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed mb-12 italic">
                     "La información es el primer paso para sanar". Te invito a visitar el blog de mi escuela para leer artículos prácticos sobre medicina tradicional, postura y bienestar.
                 </p>
                 <div class="flex justify-center">
-                    <a href="http://shizen.ymaaecuador.com/blog" target="_blank" class="bg-wine text-white px-12 py-5 rounded-2xl font-bold text-xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center gap-4 shadow-xl">
+                    <a href="https://shizen.ymaaecuador.com/blog" target="_blank" class="bg-wine text-white px-12 py-5 rounded-2xl font-bold text-xl hover:bg-wine hover:scale-[1.02] transition-all flex items-center gap-4 shadow-xl">
                         Visitar Blog Shizen <i class="fas fa-external-link-alt text-sm"></i>
                     </a>
                 </div>
@@ -205,56 +222,47 @@
         </div>
     </section>
 
-    <!-- Newsletter Section - INTEGRADO CON MAILCHIMP YMAAECUADOR ✨ -->
+    <!-- Newsletter (Mailchimp Integrado) -->
     <section id="newsletter" class="py-24" style="background-color: var(--shizen-cream);">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-wine rounded-[3rem] p-10 lg:p-16 text-white relative overflow-hidden shadow-2xl">
-                <!-- Marca de agua Yin Yang sutil dentro del newsletter -->
-                <i class="fas fa-yin-yang absolute -top-10 -right-10 text-[15rem] text-white/5 rotate-12"></i>
-                
-                <div class="relative z-10 lg:flex items-center gap-12 text-center lg:text-left">
-                    <div class="lg:w-1/2 mb-8 lg:mb-0">
-                        <h2 class="text-3xl lg:text-4xl font-bold italic mb-6 uppercase tracking-wide">Mantente en Equilibrio ✨</h2>
-                        <p class="text-red-100 text-lg leading-relaxed">
-                            Suscríbete al boletín de <strong>Shizen YMAA</strong>. Escribo semanalmente consejos prácticos sobre postura, alimentación saludable y hábitos para una vida plena.
-                        </p>
-                    </div>
-                    <div class="lg:w-1/2 bg-white p-8 rounded-[2rem] text-gray-900 shadow-xl">
-                        <!-- FORMULARIO MAILCHIMP YMAAECUADOR -->
-                        <div id="mc_embed_signup">
-                            <form action="https://ymaaecuador.us14.list-manage.com/subscribe/post?u=3803ab7dad11e211cb47e6a39&amp;id=a981edace7&amp;f_id=0074b8e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
-                                <div id="mc_embed_signup_scroll" class="space-y-4">
-                                    <div class="mc-field-group text-left">
-                                        <label for="mce-FNAME" class="block text-xs font-bold uppercase tracking-widest text-wine mb-2">Nombre </label>
-                                        <input type="text" name="FNAME" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gold outline-none transition-all" id="mce-FNAME" value="">
-                                    </div>
-                                    <div class="mc-field-group text-left">
-                                        <label for="mce-EMAIL" class="block text-xs font-bold uppercase tracking-widest text-wine mb-2">Email <span class="text-red-500">*</span></label>
-                                        <input type="email" name="EMAIL" class="required email w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-gold outline-none transition-all" id="mce-EMAIL" value="" required>
-                                    </div>
-                                    <div id="mce-responses" class="clear foot">
-                                        <div class="response hidden p-3 rounded bg-red-50 text-red-600 text-xs mb-2" id="mce-error-response"></div>
-                                        <div class="response hidden p-3 rounded bg-green-50 text-green-600 text-xs mb-2" id="mce-success-response"></div>
-                                    </div>
-                                    <!-- Bot protección -->
-                                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                                        <input type="text" name="b_3803ab7dad11e211cb47e6a39_a981edace7" tabindex="-1" value="">
-                                    </div>
-                                    <div class="optionalParent">
-                                        <div class="clear foot">
-                                            <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="w-full bg-wine text-white font-bold py-4 rounded-xl text-lg hover:scale-[1.02] active:scale-95 transition-all cursor-pointer shadow-lg" value="Suscribirme">
-                                        </div>
-                                    </div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold italic mb-6 text-wine uppercase tracking-wide">Mantente en Equilibrio ✨</h2>
+            <p class="text-gray-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                Suscríbete al boletín de <strong>Shizen YMAA</strong>. Escribo semanalmente consejos prácticos sobre postura, alimentación saludable y hábitos.
+            </p>
+            
+            <div id="mc_embed_shell">
+                <link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+                <div id="mc_embed_signup">
+                    <form action="https://ymaaecuador.us14.list-manage.com/subscribe/post?u=3803ab7dad11e211cb47e6a39&amp;id=a981edace7&amp;f_id=0074b8e5f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                        <div id="mc_embed_signup_scroll">
+                            <div class="mc-field-group">
+                                <label for="mce-FNAME">Nombre </label>
+                                <input type="text" name="FNAME" id="mce-FNAME" value="">
+                            </div>
+                            <div class="mc-field-group">
+                                <label for="mce-EMAIL">Email <span class="text-red-500 font-bold">*</span></label>
+                                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" value="" required>
+                            </div>
+                            <div id="mce-responses" class="clear foot">
+                                <div class="response hidden" id="mce-error-response"></div>
+                                <div class="response hidden" id="mce-success-response"></div>
+                            </div>
+                            <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                <input type="text" name="b_3803ab7dad11e211cb47e6a39_a981edace7" tabindex="-1" value="">
+                            </div>
+                            <div class="optionalParent">
+                                <div class="clear foot mt-4">
+                                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Suscribirme">
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Modalidades / Contacto -->
+    <!-- Contacto -->
     <section id="contacto" class="py-24 bg-white text-center relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl lg:text-5xl font-bold mb-8 italic text-wine uppercase tracking-wide">Atención Profesional</h2>
@@ -262,7 +270,7 @@
                 Coordina tu cita presencial en Guayaquil o inicia tu proceso de Dietoterapia Online desde cualquier lugar.
             </p>
             <div class="flex justify-center">
-                <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white px-12 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-wine hover:scale-[1.05] transition-all flex items-center gap-4">
+                <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl hover:bg-wine hover:scale-[1.05] transition-all flex items-center gap-4">
                     Agendar por WhatsApp <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -273,11 +281,10 @@
     <footer class="bg-white py-20 border-t border-gray-100 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <p class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-12 italic">Instituciones Afiliadas</p>
-            <!-- Logos Reordenados: Shizen -> YMAA -> FEMTC -->
-            <div class="flex flex-wrap justify-center items-center gap-16 lg:gap-24 mb-20 opacity-90">
+            <div class="flex flex-wrap justify-center items-center gap-12 lg:gap-24 mb-20 opacity-90">
                 <img src="Logo_Shizen_Horizontal.png" alt="Shizen YMAA" class="h-16 md:h-24 grayscale hover:grayscale-0 transition duration-500">
                 <img src="Logo_YMAA_Horizontal.png" alt="YMAA International" class="h-14 md:h-20 grayscale hover:grayscale-0 transition duration-500">
-                <img src="Logo Fundacion MTC.png" alt="FEMTC" class="h-20 md:h-28 grayscale hover:grayscale-0 transition duration-500">
+                <img src="Logo%20Fundacion%20MTC.png" alt="FEMTC" class="h-20 md:h-28 grayscale hover:grayscale-0 transition duration-500">
             </div>
 
             <p class="text-3xl font-bold text-wine italic tracking-tighter mb-4 uppercase">DANIEL ESPINOZA</p>
@@ -296,12 +303,11 @@
         </div>
     </footer>
 
-    <!-- Scripts de Mailchimp -->
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <!-- Scripts con HTTPS explícito -->
+    <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
     <script type="text/javascript">
         (function($) {
-            window.fnames = new Array(); 
-            window.ftypes = new Array();
+            window.fnames = new Array(); window.ftypes = new Array();
             fnames[1]='FNAME';ftypes[1]='text';
             fnames[0]='EMAIL';ftypes[0]='email';
             fnames[3]='ADDRESS';ftypes[3]='address';
