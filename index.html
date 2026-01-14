@@ -18,6 +18,35 @@
             --shizen-wine: #4A0E0E;
             --shizen-gold: #b8924e;
             --shizen-cream: #fdfcf7;
+            /* Colores modo oscuro */
+            --dark-bg: #1a1a1a;
+            --dark-card: #2d2d2d;
+            --dark-text: #e5e5e5;
+        }
+    
+        /* Clase que se activará con el botón */
+        body.dark-mode {
+            background-color: var(--dark-bg) !important;
+            color: var(--dark-text);
+        }
+    
+        .dark-mode nav, .dark-mode footer, .dark-mode header, .dark-mode section {
+            background-color: var(--dark-bg) !important;
+            border-color: #333 !important;
+        }
+    
+        .dark-mode .service-card, .dark-mode #mc_embed_signup {
+            background-color: var(--dark-card) !important;
+            border-color: #444 !important;
+        }
+    
+        .dark-mode p, .dark-mode .faq-answer {
+            color: #b0b0b0 !important;
+        }
+    
+        .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .text-wine {
+            color: #ff9d9d !important; /* Un tono vino más claro para que sea legible en negro */
+        
         }
         body { font-family: 'Inter', sans-serif; background-color: var(--shizen-cream); scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -115,6 +144,9 @@
                     <a href="#preguntas" class="hover:text-wine transition font-medium text-sm text-wine">Preguntas</a>
                     <a href="#contacto" class="hover:text-wine transition font-medium text-sm text-wine">Contacto/a>
                     <a href="https://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm shadow-md">Escuela</a>
+                    <button id="dark-mode-toggle" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-wine hover:bg-gray-200 transition">
+                        <i class="fas fa-moon"></i>
+                    </button>                
                 </div>
             </div>
         </div>
@@ -497,7 +529,29 @@
                 answer.slideToggle();
                 icon.toggleClass('rotate-180');
             });
+            // Lógica Modo Oscuro
+        $('#dark-mode-toggle').on('click', function() {
+            $('body').toggleClass('dark-mode');
+            
+            const icon = $(this).find('i');
+            
+            // Cambia el icono según el estado
+            if ($('body').hasClass('dark-mode')) {
+                icon.removeClass('fa-moon').addClass('fa-sun');
+                $(this).addClass('bg-yellow-400 text-black').removeClass('bg-gray-100');
+            } else {
+                icon.removeClass('fa-sun').addClass('fa-moon');
+                $(this).addClass('bg-gray-100 text-wine').removeClass('bg-yellow-400');
+            }
+            
+            // Guardar preferencia en el navegador
+            localStorage.setItem('theme', $('body').hasClass('dark-mode') ? 'dark' : 'light');
         });
-    </script>
+
+        // Revisar si el usuario ya tenía activado el modo oscuro al cargar la página
+        if (localStorage.getItem('theme') === 'dark') {
+            $('#dark-mode-toggle').click();
+        }
+     </script>
 </body>
 </html>
