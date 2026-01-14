@@ -12,48 +12,175 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    
- <style>
+<style>
     :root {
         --shizen-wine: #4A0E0E;
         --shizen-gold: #b8924e;
         --shizen-cream: #fdfcf7;
+        /* Colores Modo Oscuro */
         --dark-bg: #121212;
         --dark-card: #1e1e1e;
         --dark-text: #e5e5e5;
+        --dark-border: #333333;
     }
 
-    body { font-family: 'Inter', sans-serif; background-color: var(--shizen-cream); scroll-behavior: smooth; transition: background-color 0.3s ease; }
-    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+    /* --- ESTILOS BASE --- */
+    body { 
+        font-family: 'Inter', sans-serif; 
+        background-color: var(--shizen-cream); 
+        scroll-behavior: smooth; 
+        transition: background-color 0.4s ease, color 0.4s ease;
+    }
     
-    /* Estilos Modo Oscuro */
-    body.dark-mode { background-color: var(--dark-bg) !important; color: var(--dark-text) !important; }
-    .dark-mode nav, .dark-mode footer, .dark-mode header, .dark-mode section { 
-        background-color: var(--dark-bg) !important; 
-        border-color: #2d2d2d !important; 
-    }
-    .dark-mode .service-card, .dark-mode #mc_embed_signup, .dark-mode .faq-item { 
-        background-color: var(--dark-card) !important; 
-        border-color: #333 !important; 
-    }
-    .dark-mode p, .dark-mode .text-gray-600, .dark-mode .text-gray-700, .dark-mode .faq-answer { 
-        color: #a0a0a0 !important; 
-    }
-    .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode .text-wine { 
-        color: #ffb3b3 !important; 
-    }
-    .dark-mode .bg-white { background-color: var(--dark-bg) !important; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
 
-    /* Clases base */
     .text-wine { color: var(--shizen-wine); }
     .bg-wine { background-color: var(--shizen-wine); }
+    .bg-wine:hover { background-color: #380a0a; }
+    .border-wine { border-color: var(--shizen-wine); }
+    
     .text-gold { color: var(--shizen-gold); }
-    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+    .bg-gold { background-color: var(--shizen-gold); }
 
-    /* WhatsApp y Newsletter */
-    .whatsapp-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; width: 60px; height: 60px; display: flex; align-items: center; justify-content: center; z-index: 100; transition: all 0.3s ease; font-size: 30px; }
-    #mc_embed_signup { background: #fff; border-radius: 1.5rem; padding: 2rem; box-shadow: 0 10px 25px rgba(0,0,0,0.05); max-width: 450px !important; margin: 0 auto; }
+    /* --- ANIMACIONES --- */
+    .fade-in { animation: fadeIn 0.8s ease-out forwards; }
+    @keyframes fadeIn { 
+        from { opacity: 0; transform: translateY(15px); } 
+        to { opacity: 1; transform: translateY(0); } 
+    }
+
+    /* --- COMPONENTES --- */
+    .service-card img { transition: transform 0.6s ease; }
+    .service-card:hover img { transform: scale(1.1); }
+
+    .circle-profile {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* Botón WhatsApp Flotante */
+    .whatsapp-float {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #25d366;
+        color: #FFF;
+        border-radius: 50px;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+        z-index: 100;
+        font-size: 30px;
+        transition: all 0.3s ease;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
+
+    /* Mailchimp Form Base */
+    #mc_embed_signup {
+        background: #fff;
+        border-radius: 2.5rem;
+        padding: 2.5rem;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        max-width: 450px !important;
+        margin: 0 auto;
+    }
+    #mc_embed_signup .mc-field-group { margin-bottom: 1rem; text-align: left; }
+    #mc_embed_signup label { font-weight: 700; color: var(--shizen-wine); font-size: 0.8rem; margin-bottom: 0.4rem; display: block; text-transform: uppercase; }
+    #mc_embed_signup input { width: 100%; border: 1px solid #e2e8f0; padding: 0.75rem; border-radius: 1rem; outline: none; }
+    #mc_embed_signup .button { 
+        background: var(--shizen-wine) !important; 
+        border-radius: 1rem !important; 
+        font-weight: 700 !important; 
+        text-transform: uppercase !important;
+        padding: 1rem !important;
+        width: 100% !important;
+        cursor: pointer;
+        color: white !important;
+        border: none !important;
+    }
+
+    /* --- MODO OSCURO (OPTIMIZADO) --- */
+    body.dark-mode { 
+        background-color: var(--dark-bg) !important; 
+        color: var(--dark-text) !important; 
+    }
+
+    /* Margen global para secciones en dark mode */
+    .dark-mode section {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+    }
+
+    /* Fondos y bordes de secciones */
+    .dark-mode nav, 
+    .dark-mode footer, 
+    .dark-mode header, 
+    .dark-mode section {
+        background-color: var(--dark-bg) !important;
+        border-color: var(--dark-border) !important;
+    }
+
+    /* Tarjetas de servicios y Newsletter */
+    .dark-mode .service-card, 
+    .dark-mode #mc_embed_signup {
+        background-color: var(--dark-card) !important;
+        border: 1px solid var(--dark-border) !important;
+        border-radius: 2.5rem !important;
+        padding: 2.5rem !important; /* Más margen interno para que no se vea apretado */
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
+    }
+
+    /* Preguntas frecuentes (FAQ) - Ahora como cajas separadas */
+    .dark-mode .faq-item {
+        background-color: var(--dark-card) !important;
+        border: 1px solid var(--dark-border) !important;
+        border-radius: 1.5rem !important;
+        margin-bottom: 1.2rem;
+        padding: 0.5rem 1.5rem !important;
+    }
+    .dark-mode .faq-answer {
+        color: #b0b0b0 !important;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Títulos y Colores de acento en Dark Mode */
+    .dark-mode h1, 
+    .dark-mode h2, 
+    .dark-mode h3, 
+    .dark-mode .text-wine {
+        color: #ffb3b3 !important; /* Vino suavizado para legibilidad */
+    }
+    
+    .dark-mode p, 
+    .dark-mode .text-gray-600, 
+    .dark-mode .text-gray-700 {
+        color: #b0b0b0 !important;
+    }
+
+    /* Inputs de formulario en Dark Mode */
+    .dark-mode #mc_embed_signup input {
+        background-color: #2a2a2a !important;
+        border-color: #444 !important;
+        color: white !important;
+    }
+    .dark-mode #mc_embed_signup label {
+        color: #ffb3b3 !important;
+    }
+
+    /* Footer en Dark Mode */
+    .dark-mode footer {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    /* Utilidades */
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
 </head>
 <body class="text-gray-900 overflow-x-hidden">
