@@ -53,10 +53,7 @@
             justify-content: center;
             transition: all 0.3s ease;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            background-color: #128c7e;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); background-color: #128c7e; }
 
         /* Estilo Newsletter Mailchimp */
         #mc_embed_signup {
@@ -66,7 +63,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.05);
             max-width: 450px !important;
             margin: 0 auto;
-            border: 1px solid #f1f5f9;
         }
         #mc_embed_signup .mc-field-group { margin-bottom: 1rem; text-align: left; }
         #mc_embed_signup label { font-weight: 700; color: var(--shizen-wine); font-size: 0.8rem; margin-bottom: 0.4rem; display: block; text-transform: uppercase; }
@@ -80,15 +76,9 @@
             height: auto !important;
             width: 100% !important;
             cursor: pointer;
-            border: none !important;
             color: white !important;
+            border: none !important;
         }
-
-        /* FAQ Estilos */
-        .faq-item { border-bottom: 1px solid rgba(74, 14, 14, 0.1); }
-        .faq-question { cursor: pointer; transition: all 0.3s ease; }
-        .faq-question:hover { color: var(--shizen-gold); }
-        .faq-answer { display: none; padding-bottom: 1.5rem; }
 
         .service-card img { transition: transform 0.6s ease; }
         .service-card:hover img { transform: scale(1.1); }
@@ -100,7 +90,6 @@
             border-radius: 50%;
         }
 
-        /* Scrollbar oculto para servicios en móvil */
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -124,30 +113,49 @@
                     <a href="#sobre-mi" class="hover:text-wine transition font-medium text-sm text-wine">Sobre Mí</a>
                     <a href="#preguntas" class="hover:text-wine transition font-medium text-sm text-wine">Preguntas</a>
                     <a href="#contacto" class="hover:text-wine transition font-medium text-sm text-wine">Ubicación</a>
-                    <a href="#newsletter" class="hover:text-wine transition font-medium text-sm text-wine">Newsletter</a>
                     <a href="https://shizen.ymaaecuador.com" target="_blank" class="bg-wine text-white px-6 py-2 rounded-full font-semibold transition text-sm shadow-md">Mi Escuela</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="relative py-16 lg:py-32 bg-white overflow-hidden border-b border-gray-50">
+    <!-- Hero Section con Curriculum Integrado -->
+    <header class="relative py-16 lg:py-28 bg-white overflow-hidden border-b border-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- Columna Texto -->
+                <!-- Columna Texto y Curriculum -->
                 <div class="lg:w-1/2 text-center lg:text-left fade-in">
-                    <p class="text-gold font-bold text-xs sm:text-sm uppercase tracking-[0.3em] mb-6 block">
+                    <p class="text-gold font-bold text-xs sm:text-sm uppercase tracking-[0.3em] mb-4 block italic">
                         Medicina China y Rehabilitación Integrativa
                     </p>
                     
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] uppercase text-wine mb-8">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] uppercase text-wine mb-6">
                         Sanación profunda para una vida en equilibrio
                     </h1>
                     
-                    <p class="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-12 font-light">
-                        Recupera tu vitalidad y bienestar a través de un enfoque que une la sabiduría milenaria oriental con la ciencia del movimiento moderno.
-                    </p>
+                    <!-- Curriculum en el Hero -->
+                    <div class="mb-10 space-y-3 text-gray-700">
+                        <p class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fas fa-certificate text-gold text-xs"></i>
+                            <span class="text-sm lg:text-base font-medium">Terapeuta y formador en MTC, representante de <strong>YMAA en Ecuador</strong>.</span>
+                        </p>
+                        <p class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fas fa-user-md text-gold text-xs"></i>
+                            <span class="text-sm lg:text-base font-medium">Rehabilitador físico y acompañante terapéutico con enfoque integrativo.</span>
+                        </p>
+                        <p class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fas fa-check-circle text-gold text-xs"></i>
+                            <span class="text-sm lg:text-base font-medium">Evaluador de <strong>Shiatsu ante SENESCYT</strong>.</span>
+                        </p>
+                        <p class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fas fa-university text-gold text-xs"></i>
+                            <span class="text-sm lg:text-base font-medium">Diplomado en Acupuntura Chinovietnamita (FEMTC & Univ. Yunnan).</span>
+                        </p>
+                        <p class="flex items-center gap-3 justify-center lg:justify-start">
+                            <i class="fas fa-leaf text-gold text-xs"></i>
+                            <span class="text-sm lg:text-base font-medium">Especialista en Dietoterapia, Fitoterapia y Farmacobotánica.</span>
+                        </p>
+                    </div>
                     
                     <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-5">
                         <a href="https://wa.me/593999431636" target="_blank" class="bg-wine text-white px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:scale-105 transition-all flex items-center justify-center gap-3">
@@ -172,31 +180,31 @@
         </div>
     </header>
 
-    <!-- SECCIÓN DE SERVICIOS (Línea Compacta) -->
+    <!-- SECCIÓN DE SERVICIOS (Formato Compacto) -->
     <section id="servicios" class="py-16 sm:py-24" style="background-color: var(--shizen-cream);">
         <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl lg:text-5xl font-bold mb-16 italic text-wine uppercase tracking-wide">Servicios Integrativos</h2>
             <div class="flex flex-row overflow-x-auto lg:grid lg:grid-cols-6 gap-4 sm:gap-6 hide-scrollbar">
                 
                 <!-- Terapia Manual -->
-                <div class="service-card min-w-[200px] bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all flex flex-col group">
+                <div class="service-card min-w-[200px] bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all flex flex-col group text-center">
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1544126592-807daa215a0b?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Terapia Manual]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow text-center">
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
                         <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Terapia Manual y Masaje</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Tratamiento de tejidos blandos.</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 line-clamp-2">Tratamiento de tejidos blandos y liberación.</p>
                     </div>
                 </div>
 
                 <!-- Acupuntura -->
-                <div class="service-card min-w-[200px] bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all flex flex-col group">
+                <div class="service-card min-w-[200px] bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-lg transition-all flex flex-col group text-center">
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1512290902202-06e78822022b?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Acupuntura]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow text-center">
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
                         <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Acupuntura Clínica</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Regulación del flujo energético.</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 line-clamp-2">Regulación del flujo energético vital.</p>
                     </div>
                 </div>
 
@@ -205,9 +213,9 @@
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Dietoterapia]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow">
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow text-center">
                         <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2 text-gold italic">Dietoterapia MTC</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Nutrición energética.</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500">Nutrición energética personalizada.</p>
                     </div>
                 </div>
 
@@ -216,9 +224,9 @@
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1557333610-90ee4a951ecf?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Auriculoterapia]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow">
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
                         <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Auriculoterapia</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Puntos reflejos externos.</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 line-clamp-2">Estimulación de puntos reflejos externos.</p>
                     </div>
                 </div>
 
@@ -227,9 +235,9 @@
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Rehabilitación]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow text-center">
-                        <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Rehabilitación</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Recuperación funcional.</p>
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow text-center">
+                        <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Rehabilitación Física</h3>
+                        <p class="text-[10px] sm:text-xs text-gray-500 line-clamp-2">Recuperación funcional post-lesión.</p>
                     </div>
                 </div>
 
@@ -238,34 +246,39 @@
                     <div class="h-32 sm:h-40 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop" alt="[Imagen de Gimnasia Terapéutica]" class="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500">
                     </div>
-                    <div class="p-4 flex flex-col flex-grow text-center">
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow text-center">
                         <h3 class="text-xs sm:text-sm font-bold text-wine uppercase leading-tight mb-2">Gimnasia Terapéutica</h3>
-                        <p class="text-[10px] sm:text-xs text-gray-500">Movimiento consciente.</p>
+                        <p class="text-[10px] sm:text-xs text-gray-500 line-clamp-2">Movimiento consciente y equilibrio.</p>
                     </div>
                 </div>
 
+            </div>
+            
+            <div class="mt-12 flex justify-center fade-in">
+                <a href="https://wa.me/593999431636?text=Hola%20Daniel,%20me%20gustaría%20más%20información%20sobre%20sus%20tratamientos..." target="_blank" class="bg-wine/5 text-wine border border-wine/20 px-8 py-3 rounded-full font-semibold hover:bg-wine hover:text-white transition-all text-sm uppercase tracking-widest">
+                    ¿Deseas conocer más detalles? Consultar aquí
+                </a>
             </div>
             <p class="mt-8 text-xs text-gray-400 italic lg:hidden">Desliza para ver más →</p>
         </div>
     </section>
 
-    <!-- SECCIÓN SOBRE MÍ (Curriculum Actualizado) -->
+    <!-- SECCIÓN SOBRE MÍ (Formato Narrativo Revertido) -->
     <section id="sobre-mi" class="py-24 bg-white border-t border-gray-50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- Foto Circular Pequeña a la Izquierda -->
+                <!-- Foto Circular Izquierda Pequeña -->
                 <div class="lg:col-span-3 flex justify-center lg:justify-start">
                     <div class="relative w-40 h-40 sm:w-56 sm:h-56">
                         <div class="w-full h-full rounded-full overflow-hidden border-4 border-white shadow-xl relative z-10 bg-gray-100">
                             <img src="Perfil Daniel Espinoza.jpg" alt="Daniel Espinoza" class="circle-profile">
                         </div>
-                        <!-- Decoraciones de anillos -->
                         <div class="absolute inset-0 rounded-full border-2 border-gold -m-2 opacity-20"></div>
                         <div class="absolute inset-0 rounded-full border border-wine -m-4 opacity-10"></div>
                     </div>
                 </div>
 
-                <!-- Texto de Trayectoria Académica y Profesional -->
+                <!-- Trayectoria Filosofía Personal -->
                 <div class="lg:col-span-9 space-y-8 text-center lg:text-left">
                     <div class="space-y-3">
                         <h2 class="text-3xl lg:text-5xl font-bold text-wine italic uppercase">Daniel Espinoza G.</h2>
@@ -274,25 +287,19 @@
                     
                     <div class="space-y-6 text-base lg:text-lg text-gray-600 leading-relaxed text-left">
                         <p>
-                            Terapeuta y formador en <strong>Medicina Tradicional China</strong>, con una sólida trayectoria en <strong>Rehabilitación Física</strong> y acompañamiento terapéutico. Mi práctica se distingue por un enfoque integrativo en salud y bienestar, uniendo la precisión del movimiento con la sabiduría energética.
+                            En mi práctica profesional, mi misión es unir la precisión de la <strong>rehabilitación física</strong> con la profundidad energética de la <strong>Medicina Tradicional China</strong>. Mi objetivo es entender el cuerpo como un sistema integral donde la estructura y la energía fluyen en armonía.
                         </p>
                         <p>
-                            Soy representante oficial de la <strong>YMAA en Ecuador</strong>, con amplia experiencia en la enseñanza y práctica de <strong>Taichi y Chikung</strong>. Además, ejerzo como evaluador de Shiatsu certificado ante la <strong>SENESCYT</strong>.
+                            Mi enfoque es <strong>integrativo y personalizado</strong>. Entiendo que cada paciente es un universo diferente; por ello, combino terapia manual, ejercicio terapéutico consciente y sabiduría milenaria para acompañar procesos de recuperación sostenibles y profundos.
                         </p>
                         <p>
-                            Cuento con un <strong>Diplomado en Acupuntura Chinovietnamita</strong>, registrado en la Fundación Europea de Medicina Tradicional Complementaria e Integrativa, en asociación con la Universidad de Yunnan. Mi formación se complementa con estudios en <strong>Dietoterapia y Fitoterapia</strong>, y actualmente continúo profundizando mis conocimientos en el área de <strong>Farmacobotánica</strong>.
+                            Busco no solo aliviar el síntoma inmediato, sino restaurar la funcionalidad óptima y promover un bienestar que perdure en el tiempo, empoderando a cada persona en su propio camino de salud.
                         </p>
                     </div>
 
                     <div class="flex flex-wrap gap-3 pt-4 justify-center lg:justify-start">
                         <div class="bg-red-50 text-wine px-5 py-2.5 rounded-full text-xs font-bold border border-red-100 flex items-center gap-2 italic">
-                            <i class="fas fa-certificate text-gold"></i> FEMTC & Univ. Yunnan
-                        </div>
-                        <div class="bg-red-50 text-wine px-5 py-2.5 rounded-full text-xs font-bold border border-red-100 flex items-center gap-2 italic">
-                            <i class="fas fa-globe text-gold"></i> Representante YMAA Ecuador
-                        </div>
-                        <div class="bg-red-50 text-wine px-5 py-2.5 rounded-full text-xs font-bold border border-red-100 flex items-center gap-2 italic">
-                            <i class="fas fa-user-check text-gold"></i> Evaluador SENESCYT
+                            <i class="fas fa-check-circle text-gold"></i> +12 Años de Experiencia Profesional
                         </div>
                     </div>
                 </div>
@@ -312,7 +319,7 @@
                     
                     <div class="space-y-8">
                         <div class="flex items-start gap-6 group">
-                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg group-hover:bg-wine group-hover:text-white transition-colors duration-300 shadow-sm">
+                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg shadow-sm">
                                 <i class="fas fa-map-marker-alt"></i>
                             </div>
                             <div>
@@ -322,7 +329,7 @@
                         </div>
 
                         <a href="tel:+593999431636" class="flex items-start gap-6 group">
-                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg group-hover:bg-wine group-hover:text-white transition-colors duration-300 shadow-sm">
+                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg shadow-sm">
                                 <i class="fas fa-phone-alt"></i>
                             </div>
                             <div>
@@ -332,7 +339,7 @@
                         </a>
 
                         <a href="mailto:mtc@danielespinozag.com" class="flex items-start gap-6 group">
-                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg group-hover:bg-wine group-hover:text-white transition-colors duration-300 shadow-sm">
+                            <div class="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center text-wine text-lg shadow-sm">
                                 <i class="fas fa-envelope"></i>
                             </div>
                             <div>
@@ -341,7 +348,7 @@
                             </div>
                         </a>
 
-                        <a href="https://wa.me/593999431636" target="_blank" class="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-3.5 rounded-2xl font-bold hover:bg-green-600 transition-all shadow-lg mt-4 text-sm uppercase tracking-wide">
+                        <a href="https://wa.me/593999431636" target="_blank" class="inline-flex items-center gap-3 bg-green-500 text-white px-8 py-3.5 rounded-2xl font-bold hover:bg-green-600 transition-all shadow-lg mt-4 text-sm uppercase tracking-wide text-center">
                             <i class="fab fa-whatsapp text-xl"></i> Hablar por WhatsApp
                         </a>
                     </div>
@@ -381,18 +388,17 @@
         </div>
     </section>
 
-    <!-- Newsletter Mailchimp -->
+    <!-- Newsletter -->
     <section id="newsletter" class="py-24 bg-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl lg:text-4xl font-bold italic mb-6 text-wine uppercase tracking-wide">Mantente en Equilibrio ✨</h2>
             <p class="text-gray-600 text-lg mb-12 max-w-2xl mx-auto leading-relaxed">Suscríbete al boletín de Shizen YMAA para consejos prácticos.</p>
             <div id="mc_embed_shell">
-                <link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
                 <div id="mc_embed_signup">
                     <form action="https://ymaaecuador.us14.list-manage.com/subscribe/post?u=3803ab7dad11e211cb47e6a39&amp;id=a981edace7&amp;f_id=0074b8e5f0" method="post" id="mc-embedded-subscribe-form" target="_blank">
                         <div class="mc-field-group">
                             <label for="mce-FNAME">Nombre </label>
-                            <input type="text" name="FNAME" id="mce-FNAME" value="">
+                            <input type="text" name="FNAME" id="mce-FNAME">
                         </div>
                         <div class="mc-field-group">
                             <label for="mce-EMAIL">Email <span class="text-red-500 font-bold">*</span></label>
@@ -411,9 +417,9 @@
     <footer class="bg-white py-20 border-t border-gray-100 text-center">
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex flex-wrap justify-center items-center gap-12 mb-20 opacity-90">
-                <img src="Logo_Shizen_Horizontal.png" alt="[Logo Shizen]" class="h-16 grayscale hover:grayscale-0 transition duration-500">
-                <img src="Logo_YMAA_Horizontal.png" alt="[Logo YMAA]" class="h-14 grayscale hover:grayscale-0 transition duration-500">
-                <img src="Logo%20Fundacion%20MTC.png" alt="[Logo FEMTC]" class="h-20 grayscale hover:grayscale-0 transition duration-500">
+                <img src="Logo_Shizen_Horizontal.png" alt="[Logo Shizen]" class="h-16 grayscale">
+                <img src="Logo_YMAA_Horizontal.png" alt="[Logo YMAA]" class="h-14 grayscale">
+                <img src="Logo%20Fundacion%20MTC.png" alt="[Logo FEMTC]" class="h-20 grayscale">
             </div>
             <p class="text-3xl font-bold text-wine italic uppercase mb-16">DANIEL ESPINOZA</p>
             <p class="text-gray-400 text-[10px] uppercase tracking-[0.3em] font-bold">© 2025 Daniel Espinoza Gutiérrez | Guayaquil - Ecuador</p>
