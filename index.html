@@ -110,6 +110,17 @@
         border: none !important;
     }
 
+    /* Botón Explorar Cursos - Modo Claro (Igual a Agendar Cita) */
+    .btn-escuela {
+        background-color: white;
+        color: var(--shizen-wine);
+        border: 2px solid white;
+    }
+    
+    .btn-escuela:hover {
+        background-color: #f3f4f6; /* Un gris muy ligero */
+    }
+
     /* --- MODO OSCURO (OPTIMIZADO) --- */
     body.dark-mode { 
         background-color: var(--dark-bg) !important; 
@@ -120,6 +131,17 @@
     .dark-mode section {
         padding-left: 1.2rem;
         padding-right: 1.2rem;
+    }
+
+    /* Dentro de .dark-mode */
+    .dark-mode .btn-escuela {
+        background-color: transparent !important;
+        color: #ffb3b3 !important; /* El color vino suavizado que ya usas */
+        border: 1px solid #ffb3b3 !important;
+    }
+    
+    .dark-mode .btn-escuela:hover {
+        background-color: rgba(255, 179, 179, 0.1) !important;
     }
 
     .dark-mode a[href="#servicios"] {
@@ -637,8 +659,8 @@
 
             <div class="relative z-10 flex-shrink-0">
                 <a href="https://shizen.ymaaecuador.com/formacion" target="_blank" 
-                   class="inline-block bg-white dark:bg-transparent text-wine dark:text-rose-200 border border-transparent dark:border-rose-200 px-10 py-5 rounded-full font-bold uppercase tracking-widest hover:bg-gray-100 dark:hover:bg-neutral-800 transition-all shadow-lg hover:scale-105 transform">
-                    Explorar Cursos
+                   class="btn-escuela inline-block px-10 py-5 rounded-full font-bold uppercase tracking-widest transition-all shadow-lg hover:scale-105 transform">
+                       Explorar Cursos
                 </a>
             </div>
         </div>
