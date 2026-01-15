@@ -122,6 +122,46 @@
         padding-right: 1.2rem;
     }
 
+    .dark-mode a[href="#servicios"] {
+        background-color: transparent !important;
+        color: #ffb3b3 !important;
+        border-color: #ffb3b3 !important;
+    }
+
+    /* Ajustes específicos para la sección de Contacto en Modo Oscuro */
+    .dark-mode #contacto .bg-red-50 {
+        background-color: var(--dark-card) !important;
+        color: #ffb3b3 !important;
+    }
+    
+    .dark-mode #contacto h4 {
+        color: #ffb3b3 !important;
+    }
+    
+    .dark-mode #contacto p.text-gray-600 {
+        color: #b0b0b0 !important;
+    }
+    
+    /* Ajuste para que el mapa no sea un cuadro blanco gigante */
+    .dark-mode #contacto iframe {
+        filter: grayscale(80%) invert(90%) hue-rotate(180deg) brightness(90%);
+        border-color: var(--dark-border) !important;
+    }
+
+    /* Mejora para la sección Escuela en modo oscuro */
+    .dark-mode section .bg-wine {
+        background-color: #2a0808 !important; /* Un vino aún más profundo para el fondo */
+        border: 1px solid #4a0e0e;
+    }
+    
+    .dark-mode section .bg-wine p {
+        color: #e5e5e5 !important; /* Texto gris claro para que no canse la vista */
+    }
+    
+    .dark-mode a[href="#servicios"]:hover {
+        background-color: rgba(255, 179, 179, 0.1) !important;
+    }
+
     /* Fondos y bordes de secciones */
     .dark-mode nav, 
     .dark-mode footer, 
