@@ -139,7 +139,22 @@
         color: #ffb3b3 !important; /* El color vino suavizado que ya usas */
         border: 1px solid #ffb3b3 !important;
     }
+
+    /* Añade esto dentro de tu bloque de .dark-mode en el <style> */
+
+    .dark-mode .whatsapp-float, 
+    .dark-mode a[href*="wa.me"].inline-flex {
+        background-color: #1eb954 !important; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5) !important;
+        border: none !important; /* Asegura que no tenga bordes extraños */
+    }
     
+    .dark-mode .whatsapp-float:hover, 
+    .dark-mode a[href*="wa.me"].inline-flex:hover {
+        background-color: #128c7e !important; 
+        filter: brightness(1.1);
+        transform: scale(1.05); /* Le da un toque extra de dinamismo */
+    }
     .dark-mode .btn-escuela:hover {
         background-color: rgba(255, 179, 179, 0.1) !important;
     }
