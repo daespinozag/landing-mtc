@@ -50,7 +50,13 @@
     }
 
     /* --- COMPONENTES --- */
-    .service-card img { transition: transform 0.6s ease; }
+   .service-card {
+        padding: 0 !important; 
+        display: flex;
+        flex-direction: column;
+        overflow: hidden; 
+    }
+    .service-card img { transition: transform 0.6s ease; width: 100%; display: block; }
     .service-card:hover img { transform: scale(1.1); }
 
     .circle-profile {
@@ -126,12 +132,19 @@
     }
 
     /* Tarjetas de servicios y Newsletter */
-    .dark-mode .service-card, 
+    /* Tarjeta de servicios: SIN padding para que la imagen no se encoja */
+    .dark-mode .service-card {
+        background-color: var(--dark-card) !important;
+        border: 1px solid var(--dark-border) !important;
+        padding: 0 !important; 
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
+    }
+
+    /* Newsletter: Mantiene su padding original */
     .dark-mode #mc_embed_signup {
         background-color: var(--dark-card) !important;
         border: 1px solid var(--dark-border) !important;
-        border-radius: 2.5rem !important;
-        padding: 2.5rem !important; /* Más margen interno para que no se vea apretado */
+        padding: 2.5rem !important;
         box-shadow: 0 15px 35px rgba(0,0,0,0.3) !important;
     }
 
